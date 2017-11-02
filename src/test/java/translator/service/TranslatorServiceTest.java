@@ -24,4 +24,12 @@ public class TranslatorServiceTest {
         assertEquals("Esto es una prueba de servicio de traducción",translatedText.getTranslation());
     }
 
+    @Autowired
+    TranslatorService translatorService;
+    @Test
+    public void translateTestFromEnglishToCatalan() throws Exception {
+        TranslatedText translatedText = translatorService.translate("en", "ca", "This is a test of independence service");
+        assertEquals("aquesta és una prova del servei d'independència",translatedText.getTranslation());
+    }
+
 }
