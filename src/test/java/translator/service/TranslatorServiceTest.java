@@ -29,7 +29,7 @@ public class TranslatorServiceTest {
     @Test
     public void translateTestFromEnglishToCatalan() throws Exception {
         TranslatedText translatedText = translatorService.translate("en", "ca", "This is a test of independence service");
-        assertEquals("Aquesta és una prova del servei d'independ",translatedText.getTranslation());
+        assertEquals("Aquesta és una prova del servei d'independència",translatedText.getTranslation());
     }
 
 }
